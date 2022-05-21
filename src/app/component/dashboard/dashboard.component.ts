@@ -47,17 +47,17 @@ addEmployee() {
 
  getAllEmployee() {
    this.empService.getAllEmployee().subscribe(res=>{
-     this.empList = res;
+     console.log("res",res);
    },err=>{
-      console.log("error while fetching data.")
+      console.log(err)
    });
  }
   
- editEmployee(emp : Employee) {
-   this.empDetail.controls['id'].setValue(emp.id);
-   this.empDetail.controls['name'].setValue(emp.name);
-   this.empDetail.controls['email'].setValue(emp.email);
-   this.empDetail.controls['salary'].setValue(emp.salary);
+ editEmployee() {
+  //  this.empDetail.controls['id'].setValue(emp.id);
+  //  this.empDetail.controls['name'].setValue(emp.name);
+  //  this.empDetail.controls['email'].setValue(emp.email);
+  //  this.empDetail.controls['salary'].setValue(emp.salary);
  }
 
 }
